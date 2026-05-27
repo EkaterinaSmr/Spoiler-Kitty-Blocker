@@ -1,2 +1,2 @@
 Ссылка на git:
-https://github.com/USERNAME/spoiler-kitty-blocker
+https://github.com/EkaterinaSmr/Spoiler-Kitty-Blocker.git

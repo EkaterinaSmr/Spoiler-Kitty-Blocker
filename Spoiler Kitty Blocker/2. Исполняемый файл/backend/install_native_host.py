@@ -160,8 +160,8 @@ def make_launcher(db_path):
         launcher = BACKEND_DIR / "run_native_host.cmd"
         env_line = f'set "SPOILER_KITTY_DB={db_path}"\r\n' if db_path else ""
         launcher.write_text(
-            f'@echo off\r\n{env_line}"{sys.executable}" "{HOST_FILE}"\r\n',
-            encoding="utf-8",
+            f'@echo off\r\n{env_line}"{sys.executable}" "%~dp0native_host.py"\r\n',
+            encoding="ascii",
         )
         return launcher
 
