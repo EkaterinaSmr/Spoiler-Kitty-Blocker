@@ -26,7 +26,7 @@ aghapakfihlebgbgickelomomopjnhbl
 
 ## Как подключить SQLite
 
-В папке "2. Исполняемый файл" выполнить:
+В cmd перейти в папку "2. Исполняемый файл" и выполнить:
 
    bash
 python backend/install_native_host.py
