@@ -1,0 +1,229 @@
+:root {
+  color-scheme: light;
+  --bg: #fbf7ff;
+  --card: #ffffff;
+  --ink: #241933;
+  --muted: #6f657d;
+  --accent: #764bd8;
+  --accent-soft: #efe8ff;
+  --danger-soft: #fff0eb;
+  --border: rgba(52, 31, 82, 0.14);
+  --shadow: 0 20px 55px rgba(43, 27, 70, 0.13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font:
+    16px/1.55 system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.page {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 36px 0 52px;
+}
+
+.header {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  font-size: 34px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+h1 {
+  margin-bottom: 4px;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.05;
+}
+h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+p,
+.hint,
+small {
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control.checkbox {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.control strong,
+.control > span:first-child {
+  font-weight: 700;
+}
+
+.control small {
+  display: block;
+  margin-top: 2px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 11px 12px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(118, 75, 216, 0.65);
+  box-shadow: 0 0 0 4px rgba(118, 75, 216, 0.12);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  margin-top: 3px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 4px #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 220px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 16px;
+  background: var(--accent);
+  color: #fff;
+  font:
+    800 14px/1 system-ui,
+    sans-serif;
+  cursor: pointer;
+}
+
+button.secondary {
+  color: var(--ink);
+  background: var(--accent-soft);
+}
+
+.status {
+  color: var(--muted);
+  min-height: 1em;
+}
+
+code {
+  padding: 0.14em 0.35em;
+  border-radius: 0.45em;
+  background: var(--accent-soft);
+  color: #3a216e;
+}
+
+@media (max-width: 720px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    align-items: flex-start;
+  }
+}
+
+select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.db-grid {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 10px 14px;
+  margin: 14px 0 0;
+}
+
+.db-grid dt {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.db-grid dd {
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}

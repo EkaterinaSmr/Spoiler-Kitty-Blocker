@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="Game of Thrones test poster">
+  <rect width="720" height="440" fill="#2d2d36"/>
+  <rect x="32" y="32" width="656" height="376" rx="28" fill="#3f3f4a" stroke="#d8c895" stroke-width="8"/>
+  <text x="360" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" fill="#f4e3a1">Game of Thrones</text>
+  <text x="360" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#f4e3a1">test image for spoiler replacement</text>
+</svg>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Настройки Spoiler Kitty Blocker</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div class="badge">🐾</div>
+        <div>
+          <h1>Spoiler Kitty Blocker</h1>
+          <p>Настройки словаря и обработки страницы.</p>
+        </div>
+      </header>
+
+      <section class="card grid-2">
+        <label class="control checkbox">
+          <input id="enabled" type="checkbox" />
+          <span>
+            <strong>Блокировка</strong>
+            <small>Скрывает фрагменты страницы по словарю.</small>
+          </span>
+        </label>
+
+        <label class="control">
+          <span>Режим обработки</span>
+          <select id="mode">
+            <option value="cats">Скрывать фрагмент</option>
+            <option value="inline-cats">Заменять слово котиком</option>
+            <option value="blur">Размывать слово</option>
+            <option value="hide">Скрывать слово</option>
+            <option value="mark">Помечать слово</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="card">
+        <label class="control checkbox">
+          <input id="replaceImages" type="checkbox" />
+          <span>
+            <strong>Заменять изображения</strong>
+            <small
+              >Изображения с совпадениями по словарю заменяются
+              SVG-котиками.</small
+            >
+          </span>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Словарь</h2>
+        <p class="hint">Одна строка — одно слово или фраза.</p>
+        <textarea id="keywords" spellcheck="false" rows="14"></textarea>
+        <div class="row wrap">
+          <button id="save" type="button">Сохранить</button>
+          <button id="reset" type="button" class="secondary">
+            Словарь по умолчанию
+          </button>
+          <span id="saveStatus" class="status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <section class="card grid-2">
+        <label class="control checkbox">
+          <input id="wholeWord" type="checkbox" />
+          <span>
+            <strong>Искать целые слова</strong>
+            <small>Совпадение не срабатывает внутри других слов.</small>
+          </span>
+        </label>
+
+        <label class="control checkbox">
+          <input id="caseSensitive" type="checkbox" />
+          <span>
+            <strong>Учитывать регистр</strong>
+            <small>Различает строчные и прописные буквы.</small>
+          </span>
+        </label>
+
+        <label class="control">
+          <span>Максимум замен на странице</span>
+          <input
+            id="maxReplacements"
+            type="number"
+            min="1"
+            max="5000"
+            step="1"
+          />
+        </label>
+
+        <label class="control">
+          <span>Подпись замены</span>
+          <input id="replacementLabel" type="text" maxlength="80" />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>SQLite</h2>
+        <p class="hint">
+          Python-скрипт хранит настройки, словарь и историю проверок в SQLite.
+        </p>
+        <dl class="db-grid">
+          <dt>Статус</dt>
+          <dd id="dbStatus">Проверка…</dd>
+          <dt>Файл базы</dt>
+          <dd><code id="dbPath">—</code></dd>
+          <dt>Статистика</dt>
+          <dd id="dbStats">—</dd>
+        </dl>
+        <div class="row wrap">
+          <button id="loadFromDb" type="button" class="secondary">
+            Загрузить из SQLite
+          </button>
+          <button id="saveToDb" type="button" class="secondary">
+            Записать в SQLite
+          </button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Проверка</h2>
+        <ol>
+          <li>Открыть <code>test/sample_page.html</code>.</li>
+          <li>Проверить скрытие фраз из словаря.</li>
+          <li>Проверить замену тестового изображения.</li>
+          <li>Изменить режим и нажать «Проверить страницу» в попапе.</li>
+          <li>
+            Для SQLite: выполнить
+            <code>python backend/install_native_host.py</code> и перезагрузить
+            расширение.
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>

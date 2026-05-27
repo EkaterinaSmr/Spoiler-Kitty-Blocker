@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240" role="img" aria-label="цветной котик скрывает спойлер">
+  <title>Sage cat spoiler card</title>
+  <desc>Cat icon adapted from Black Cat Vector.svg by Nicereddy, Wikimedia Commons, CC0 1.0. Recolored for this project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fff3"/>
+      <stop offset="1" stop-color="#e8f7df"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="340" height="220" rx="34" fill="url(#bg)"/>
+  <rect x="20" y="20" width="320" height="200" rx="28" fill="#ffffff" opacity=".58"/>
+  <g transform="translate(130 54) scale(1.0)">
+    <g id="cat-face" fill="#93c47d">
+      <path d="M50 12C39 12 29 16 23 24L13 14c-1.7-1.7-4.6-.5-4.5 1.9l.8 25.3C5.9 48.1 4 56 4 64c0 20.4 20.6 30 46 30s46-9.6 46-30c0-8-1.9-15.9-5.3-22.8l.8-25.3c.1-2.4-2.8-3.6-4.5-1.9L77 24c-6-8-16-12-27-12z"/>
+    </g>
+    <g id="cat-details" fill="#fffaf5">
+      <ellipse cx="35" cy="55" rx="5.6" ry="7.4"/>
+      <ellipse cx="65" cy="55" rx="5.6" ry="7.4"/>
+      <circle cx="37.2" cy="52.8" r="1.8" fill="#537b3f"/>
+      <circle cx="67.2" cy="52.8" r="1.8" fill="#537b3f"/>
+      <path d="M50 66l-4.5-3.2c-1.5-1.1-.7-3.4 1.2-3.4h6.6c1.9 0 2.7 2.3 1.2 3.4L50 66z" fill="#fff0f3"/>
+      <path d="M50 66c-3.9 5.8-10.8 5.4-14 1.1M50 66c3.9 5.8 10.8 5.4 14 1.1" fill="none" stroke="#fffaf5" stroke-width="4.2" stroke-linecap="round"/>
+      <path d="M22 63H8M23 70H10M78 63h14M77 70h13" fill="none" stroke="#fffaf5" stroke-width="3.2" stroke-linecap="round"/>
+    </g>
+  </g>
+  <text x="180" y="178" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#3b2b63">спойлер спрятан</text>
+</svg>

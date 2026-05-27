@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spoiler Kitty Blocker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="hero">
+        <div class="logo" aria-hidden="true">🐱</div>
+        <div>
+          <h1>Spoiler Kitty</h1>
+          <p>Скрытие текста и изображений по словарю</p>
+        </div>
+      </header>
+
+      <label class="switch-row">
+        <span>
+          <strong>Блокировка</strong>
+          <small id="statusText">Загрузка…</small>
+        </span>
+        <input id="enabled" type="checkbox" role="switch" />
+      </label>
+
+      <label class="field">
+        <span>Режим обработки</span>
+        <select id="mode">
+          <option value="cats">Скрывать фрагмент</option>
+          <option value="inline-cats">Заменять слово котиком</option>
+          <option value="blur">Размывать слово</option>
+          <option value="hide">Скрывать слово</option>
+          <option value="mark">Помечать слово</option>
+        </select>
+      </label>
+
+      <label class="switch-row compact-switch">
+        <span>
+          <strong>Заменять изображения</strong>
+          <small
+            >Изображения с совпадениями по словарю заменяются
+            SVG-котиками.</small
+          >
+        </span>
+        <input id="replaceImages" type="checkbox" role="switch" />
+      </label>
+
+      <form id="addForm" class="add-form">
+        <label class="field compact">
+          <span>Слово или фраза</span>
+          <input
+            id="newKeyword"
+            type="text"
+            placeholder="финал сериала"
+            maxlength="80"
+          />
+        </label>
+        <button type="submit">Добавить</button>
+      </form>
+
+      <div class="stats" aria-live="polite">
+        <span id="statsText">Нет данных страницы.</span>
+      </div>
+
+      <div class="stats db-status" aria-live="polite">
+        <span id="dbText">Проверка SQLite…</span>
+      </div>
+
+      <div class="actions">
+        <button id="rescan" type="button">Проверить страницу</button>
+        <button id="openOptions" type="button" class="secondary">
+          Настройки
+        </button>
+      </div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

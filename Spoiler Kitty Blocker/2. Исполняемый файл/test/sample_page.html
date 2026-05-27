@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Тест Spoiler Kitty Blocker</title>
+    <style>
+      body {
+        max-width: 760px;
+        margin: 40px auto;
+        font:
+          18px/1.55 system-ui,
+          sans-serif;
+      }
+      article {
+        display: grid;
+        gap: 14px;
+      }
+      figure {
+        margin: 0;
+      }
+      figure img {
+        width: 360px;
+        max-width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+      }
+      figcaption {
+        color: #666;
+        font-size: 14px;
+        margin-top: 4px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid #ccc;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>Игра престолов: тестовая страница</h1>
+      <p>
+        Этот абзац должен быть полностью закрыт карточкой с котиком, потому что
+        здесь упоминается Джон Сноу.
+      </p>
+      <p>
+        Этот безопасный абзац должен остаться видимым: здесь нет слов из
+        словаря.
+      </p>
+      <figure>
+        <img
+          src="spoiler-image.svg"
+          alt="Постер Game of Thrones"
+          width="360"
+          height="220"
+        />
+        <figcaption>
+          Эта тестовая картинка связана с Game of Thrones и должна замениться
+          локальным котиком.
+        </figcaption>
+      </figure>
+      <p>
+        В другом фрагменте есть Дейенерис, Таргариен и Вестерос — его тоже нужно
+        скрыть целиком.
+      </p>
+      <ul>
+        <li>Обычный пункт списка без спойлеров.</li>
+        <li>Пункт со словом Ланнистеры должен превратиться в котика.</li>
+      </ul>
+      <table>
+        <tr>
+          <th>Поле</th>
+          <th>Значение</th>
+        </tr>
+        <tr>
+          <td>Сериал</td>
+          <td>Game of Thrones</td>
+        </tr>
+        <tr>
+          <td>Безопасная строка</td>
+          <td>Котики любят спать на клавиатуре.</td>
+        </tr>
+      </table>
+    </article>
+  </body>
+</html>
